@@ -99,6 +99,10 @@ public class Menu {
         try {
             System.out.println("Nhập mã sinh viên");
             String id = scanner.nextLine();
+            if (checkId(id)!=-1){
+                System.out.println("Mã sinh viên đã tồn tại");
+                throw new Exception();
+            }
             System.out.println("Nhập tên sinh viên");
             String name = scanner.nextLine();
             System.out.println("Nhập tuổi");
